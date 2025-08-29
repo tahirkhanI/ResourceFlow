@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- App Icon -->
+        <ImageView
+            android:id="@+id/app_icon"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/ic_edu_manager"
+            android:background="@drawable/rounded_square_blue"
+            android:contentDescription="App Icon" />
+
+        <!-- App Name -->
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EduManager"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#222222"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Your Account"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:textColor="#222222"
+            android:layout_marginTop="18dp"
+            android:gravity="center"/>
+
+        <!-- Full Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full Name"
+            android:textColor="#222222"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginTop="26dp"/>
+
+        <EditText
+            android:id="@+id/inputFullName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Enter your full name"
+            android:background="@drawable/rounded_input_bg"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:minHeight="48dp"
+            android:textColor="#222222"
+            android:textSize="16sp"
+            android:layout_marginTop="7dp"/>
+
+        <!-- Email Address -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email Address"
+            android:textColor="#222222"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginTop="18dp"/>
+
+        <EditText
+            android:id="@+id/inputEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Enter your academic email"
+            android:background="@drawable/rounded_input_bg"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:textColor="#222222"
+            android:textSize="16sp"
+            android:layout_marginTop="7dp"/>
+
+        <!-- Password -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textColor="#222222"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginTop="18dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/rounded_input_bg">
+
+            <EditText
+                android:id="@+id/inputPassword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="48dp"
+                android:hint="Create a strong password"
+                android:inputType="textPassword"
+                android:background="@android:color/transparent"
+                android:textColor="#222222"
+                android:textSize="16sp"
+                android:paddingStart="14dp"
+                android:paddingEnd="44dp"/>
+
+            <ImageView
+                android:id="@+id/togglePassword"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_eye"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="14dp"
+                android:contentDescription="Show Password"/>
+        </RelativeLayout>
+
+        <!-- Role Selector -->
+        <RadioGroup
+            android:id="@+id/roleGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="22dp">
+
+            <RadioButton
+                android:id="@+id/rbStudent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:text="Student"
+                android:textColor="@color/primary_blue"
+                android:textSize="16sp"
+                android:background="@drawable/role_toggle_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="0dp"
+                android:layout_marginEnd="8dp"/>
+
+            <RadioButton
+                android:id="@+id/rbFaculty"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:text="Faculty"
+                android:textColor="#969696"
+                android:textSize="16sp"
+                android:background="@drawable/role_toggle_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="0dp"
+                android:layout_marginEnd="8dp"/>
+
+
+        </RadioGroup>
+
+        <!-- Create Account Button -->
+        <Button
+            android:id="@+id/btnCreateAccount"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Create Account"
+            android:background="@drawable/rounded_button_bg"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:minHeight="48dp"
+            android:layout_marginTop="28dp"/>
+
+        <!-- Sign In Link -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="18dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account?"
+                android:textSize="16sp"
+                android:textColor="#777777"/>
+            <TextView
+                android:id="@+id/linkSignIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Sign In"
+                android:textColor="#2763F7"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <!-- Terms and Privacy Policy -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="By signing up, you agree to our Terms of Service and Privacy Policy"
+            android:textColor="#999999"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"/>
+
+    </LinearLayout>
+</ScrollView>

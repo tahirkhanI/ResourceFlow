@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    package="com.example.resourceflow">
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <application
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ResourceFlow"
+        tools:targetApi="31">
+
+        <!-- LoginActivity is the launcher -->
+        <activity
+            android:name=".ui.auth.LoginActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            android:label="@string/title_activity_login"
+            android:theme="@style/Theme.ResourceFlow.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.auth.SignUpActivity"
+            android:exported="true"
+            android:label="@string/title_activity_signup"
+            android:theme="@style/Theme.ResourceFlow"/>
+        <activity
+            android:name=".ui.faculty.FacultyDashboardActivity"/>
+        <activity
+            android:usesCleartextTraffic="true"
+            android:name=".ui.faculty.PostAnnouncementActivity"/>
+        <activity android:name=".ui.resource.ResourceRequestActivity"
+            android:label="Resource Request"
+            android:exported="true"
+            android:theme="@style/Theme.ResourceFlow"/>
+        <activity
+            android:name=".ui.faculty.FacultyProfileActivity"
+            android:label="Faculty Profile"
+            android:exported="true"
+            android:theme="@style/Theme.ResourceFlow"/>
+        <activity
+            android:name=".ui.classroom.ClassroomBookingActivity"
+            android:label="Classroom Booking"
+            android:exported="true"
+            android:theme="@style/Theme.ResourceFlow"/>
+        <activity
+            android:name=".ui.admin.AdminDashboardActivity"
+            android:label="Admin Profile"
+            android:exported="true"
+            android:theme="@style/Theme.ResourceFlow"/>
+        <activity
+            android:name=".ui.admin.AddRoomActivity" />
+
+        <activity android:name=".ui.admin.UserManagementActivity" />
+        <activity android:name=".ui.admin.AnnouncementsActivity" />
+        <activity android:name=".ui.admin.ReportCenterActivity" />
+        <activity android:name=".ui.admin.ReportsActivity" />
+        <activity android:name=".ui.admin.AddResourceActivity" />
+
+        <activity android:name=".network.ForgetPasswordActivity" />
+        <activity android:name=".ui.auth.RecoveryPasswordActivity"/>
+        <activity android:name=".ui.student.StudentDashboardActivity" />
+        <activity android:name=".ui.admin.ResourceManagementActivity"/>
+
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ResourceFlow" />
+    </application>
+</manifest>

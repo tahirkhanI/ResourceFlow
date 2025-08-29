@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Top App Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:textColor="#2763F7"
+                android:textSize="17sp"
+                android:fontFamily="sans-serif-medium"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="New Announcement"
+                android:textColor="#111"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/btnSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send"
+                android:textColor="#2763F7"
+                android:textSize="17sp"
+                android:fontFamily="sans-serif-medium"/>
+        </LinearLayout>
+
+        <!-- Title Field -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textStyle="bold"
+            android:textColor="#222"
+            android:textSize="15sp"
+            android:layout_marginBottom="4dp"/>
+
+        <EditText
+            android:id="@+id/inputTitle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_input_bg"
+            android:hint="Enter announcement title"
+            android:padding="14dp"
+            android:textColorHint="#BABDBF"
+            android:textColor="#222"
+            android:textSize="15sp"
+            android:layout_marginBottom="17dp"
+            android:inputType="text"/>
+
+        <!-- Message Field -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Message"
+            android:textStyle="bold"
+            android:textColor="#222"
+            android:textSize="15sp"
+            android:layout_marginBottom="4dp"/>
+
+        <EditText
+            android:id="@+id/inputMessage"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/rounded_input_bg"
+            android:hint="Type your announcement message here"
+            android:padding="14dp"
+            android:textColorHint="#BABDBF"
+            android:textColor="#222"
+            android:textSize="15sp"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:layout_marginBottom="17dp"/>
+
+        <!-- Attachments -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Attachments"
+            android:textStyle="bold"
+            android:textColor="#222"
+            android:textSize="15sp"
+            android:layout_marginBottom="4dp"/>
+
+        <LinearLayout
+            android:id="@+id/attachPanel"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_input_bg_gray"
+            android:gravity="center_vertical"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:layout_marginBottom="20dp"
+            android:clipToPadding="false">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_attach"
+                app:tint="#85898F"
+                android:contentDescription="Attach" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  Add files (optional)"
+                android:textColor="#85898F"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+        <!-- Send To -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send to"
+            android:textStyle="bold"
+            android:textColor="#222"
+            android:textSize="15sp"
+            android:layout_marginBottom="4dp"/>
+
+        <RadioGroup
+            android:id="@+id/radioSendTo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rbAllStudents"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="All Students"
+                android:textColor="#111"
+                android:textSize="16sp"
+                android:buttonTint="#2763F7"
+                android:background="@drawable/rounded_radio_bg"
+                android:paddingStart="10dp" />
+
+            <RadioButton
+                android:id="@+id/rbEntireClass"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Entire Class"
+                android:textColor="#111"
+                android:textSize="16sp"
+                android:buttonTint="#2763F7"
+                android:background="@drawable/rounded_radio_bg"
+                android:paddingStart="10dp"
+                android:layout_marginTop="7dp"/>
+        </RadioGroup>
+
+        <!-- Preview Button -->
+        <Button
+            android:id="@+id/btnPreview"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="25dp"
+            android:text=" Preview"
+            android:textAllCaps="false"
+            android:drawableLeft="@drawable/ic_eye"
+            android:textColor="#FFF"
+            android:backgroundTint="#2763F7"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-medium" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Yellow triangle background -->
+    <path
+        android:fillColor="#FFEB3B"
+        android:pathData="M1,21 L12,2 L23,21 H1 Z" />
+
+    <!-- Exclamation bar -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M11,7 H13 V15 H11 Z" />
+
+    <!-- Exclamation dot -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M11,17 H13 V19 H11 Z" />
+</vector>

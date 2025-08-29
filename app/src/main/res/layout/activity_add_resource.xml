@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="12dp"
+                android:src="@android:drawable/ic_media_previous"
+                app:tint="@android:color/black"
+                android:contentDescription="@string/back_button" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/manage_classroom"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="8dp"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+
+        <!-- Search -->
+        <EditText
+            android:id="@+id/etSearchRoom"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/search_hint"
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:padding="10dp"
+            android:background="@android:drawable/edit_text"
+            android:inputType="text"
+            android:importantForAutofill="no"
+            android:textColor="@android:color/black"/>
+
+        <!-- Select existing room -->
+        <TextView
+            android:id="@+id/tvSelectRoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_existing_room"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:textColor="@android:color/black"/>
+
+        <!-- Example rooms -->
+        <TextView
+            android:id="@+id/tvRoom301"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/room_301"
+            android:padding="12dp"
+            android:background="@android:drawable/edit_text"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/tvRoom205"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/room_205"
+            android:padding="12dp"
+            android:background="@android:drawable/edit_text"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/tvRoom402"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/room_402"
+            android:padding="12dp"
+            android:background="@android:drawable/edit_text"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/black"/>
+
+        <!-- OR Divider -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/or"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:textColor="@android:color/darker_gray"/>
+
+        <!-- Create new room -->
+        <TextView
+            android:id="@+id/tvCreateRoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/create_new_room"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:textColor="@android:color/black"/>
+
+        <!-- Room number -->
+        <EditText
+            android:id="@+id/etRoomNumber"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/enter_room_number"
+            android:layout_marginTop="8dp"
+            android:inputType="number"
+            android:importantForAutofill="yes"
+            android:textColor="@android:color/black"/>
+
+        <!-- Block name -->
+        <EditText
+            android:id="@+id/etBlockName"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/enter_block_name"
+            android:layout_marginTop="8dp"
+            android:inputType="textCapWords"
+            android:importantForAutofill="yes"
+            android:textColor="@android:color/black"/>
+
+        <!-- Room type -->
+        <Spinner
+            android:id="@+id/spRoomType"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Floor -->
+        <Spinner
+            android:id="@+id/spFloor"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Resources -->
+        <TextView
+            android:id="@+id/tvResources"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/room_resources"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:textColor="@android:color/black"/>
+
+        <!-- Checkboxes -->
+        <CheckBox
+            android:id="@+id/cbProjector"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="@string/projector"
+            android:textColor="@android:color/black"/>
+
+        <CheckBox
+            android:id="@+id/cbComputer"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="@string/computer"
+            android:textColor="@android:color/black"/>
+
+        <CheckBox
+            android:id="@+id/cbWhiteboard"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="@string/whiteboard"
+            android:textColor="@android:color/black"/>
+
+        <CheckBox
+            android:id="@+id/cbAC"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="@string/ac"
+            android:textColor="@android:color/black"/>
+
+        <CheckBox
+            android:id="@+id/cbSpeakers"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="@string/speakers"
+            android:textColor="@android:color/black"/>
+
+        <CheckBox
+            android:id="@+id/cbSmartBoard"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="@string/smart_board"
+            android:textColor="@android:color/black"/>
+
+        <!-- Save button -->
+        <Button
+            android:id="@+id/btnSaveRoom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save_room"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+</ScrollView>

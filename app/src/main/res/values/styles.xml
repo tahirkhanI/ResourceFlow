@@ -1,0 +1,29 @@
+<resources>
+
+    <style name="Widget.Theme.ResourceFlow.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="Widget.Theme.ResourceFlow.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+    <style name="Theme.YourApp" parent="Theme.Material3.DayNight.NoActionBar">
+
+    </style>
+    <!-- Room item strings -->
+    <string name="room_name">Room 101</string>
+    <string name="available_now">Available Now</string>
+    <string name="book_now">Book Now</string>
+    <string name="capacity_format">Capacity: 40 students</string>
+    <string name="power_outlets_format">20 power outlets</string>
+    <string name="tables_format">8 tables</string>
+    <string name="chairs_format">32 chairs</string>
+    <string name="projector_desc">Projector</string>
+    <string name="ac_desc">Air Conditioner</string>
+    <string name="fan_desc">Fan</string>
+    <string name="wifi_desc">WiFi</string>
+
+
+
+</resources>

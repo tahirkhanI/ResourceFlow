@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<item name="chipAC" type="id" />
+<item name="listResources" type="id" />
+<item name="spinnerBuilding" type="id" />
+<item name="editRoomNumber" type="id" />
+
+        <item name="etSearchRoom" type="id" />
+        <item name="spRoomType" type="id" />
+        <item name="spFloor" type="id" />
+        <item name="etRoomNumber" type="id" />
+        <item name="etBlockName" type="id" />
+        <item name="cbProjector" type="id" />
+        <item name="cbComputer" type="id" />
+        <item name="cbWhiteboard" type="id" />
+        <item name="cbAC" type="id" />
+        <item name="cbSpeakers" type="id" />
+        <item name="cbSmartBoard" type="id" />
+        <item name="btnSaveRoom" type="id" />
+
+
+        <item name="bookingLayout" type="id" />
+        <item name="btnSelectDate" type="id" />
+        <item name="btnSelectTime" type="id" />
+        <item name="tvChosenDateTime" type="id" />
+        <item name="btnConfirmBooking" type="id" />
+        <item name="tvBookingTitle" type="id" />
+        <item name="tvSelectedRoom" type="id" />
+        <item name="tvSelectDateLabel" type="id" />
+        <item name="tvSelectTimeLabel" type="id" />
+    </resources>
+

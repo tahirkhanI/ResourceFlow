@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bookingLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/tvBookingTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Room Booking"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="24dp" />
+
+    <!-- Display Selected Room Name -->
+    <TextView
+        android:id="@+id/tvSelectedRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selected Room: "
+        android:textSize="18sp"
+        android:paddingBottom="16dp" />
+
+    <!-- Date Picker -->
+    <TextView
+        android:id="@+id/tvSelectDateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Date:"
+        android:textSize="16sp"
+        android:paddingBottom="8dp" />
+
+    <Button
+        android:id="@+id/btnSelectDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose Date" />
+
+    <!-- Time Picker -->
+    <TextView
+        android:id="@+id/tvSelectTimeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Time:"
+        android:textSize="16sp"
+        android:paddingTop="24dp"
+        android:paddingBottom="8dp" />
+
+    <Button
+        android:id="@+id/btnSelectTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose Time" />
+
+    <!-- Display chosen date and time -->
+    <TextView
+        android:id="@+id/tvChosenDateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No date and time selected"
+        android:textSize="16sp"
+        android:textColor="#555"
+        android:paddingTop="24dp"
+        android:paddingBottom="32dp" />
+
+    <!-- Book Button -->
+    <Button
+        android:id="@+id/btnConfirmBooking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Book Now"
+        android:backgroundTint="#6200EE"
+        android:textColor="#FFF"
+        android:textAllCaps="true"
+        android:padding="12dp" />
+
+</LinearLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#FFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notification Center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Send To Toggle Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnStudents"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:text="Students"
+                android:backgroundTint="#2763F7"
+                android:textColor="#FFF"/>
+
+            <Button
+                android:id="@+id/btnFaculty"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:text="Faculty"
+                android:backgroundTint="#F5F5F7"
+                android:textColor="#333"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"/>
+
+            <Button
+                android:id="@+id/btnBoth"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:text="Both"
+                android:backgroundTint="#F5F5F7"
+                android:textColor="#333"/>
+        </LinearLayout>
+
+        <!-- Subject -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subject"
+            android:textSize="14sp"
+            android:textColor="#666"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="4dp"/>
+
+        <EditText
+            android:id="@+id/editSubject"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@android:drawable/edit_text"
+            android:hint="Enter notification subject"
+            android:padding="12dp"
+            android:textSize="15sp"
+            android:textColor="#222"/>
+
+        <!-- Message -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Message"
+            android:textSize="14sp"
+            android:textColor="#666"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="4dp"/>
+
+        <EditText
+            android:id="@+id/editMessage"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@android:drawable/edit_text"
+            android:hint="Type your message here"
+            android:gravity="top"
+            android:padding="12dp"
+            android:textSize="15sp"
+            android:textColor="#222"
+            android:inputType="textMultiLine"
+            android:minLines="3"/>
+
+        <!-- Send Time: Switch for Immediate or Later -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send Time"
+            android:textSize="14sp"
+            android:textColor="#666"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="4dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="start|center_vertical"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send Now"
+                android:textColor="#222"
+                android:textSize="15sp"
+                android:layout_marginEnd="16dp"/>
+
+            <Switch
+                android:id="@+id/switchSendNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"/>
+        </LinearLayout>
+
+        <!-- Send Notification Button -->
+        <Button
+            android:id="@+id/btnSendNotification"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Send Notification"
+            android:textAllCaps="false"
+            android:backgroundTint="#2763F7"
+            android:textColor="#FFF"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+</ScrollView>

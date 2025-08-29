@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAFB"
+    android:padding="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Top Bar: Title, Welcome Text & Profile Icon -->
+        <LinearLayout
+            android:id="@+id/topBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvDashboardTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Faculty Dashboard"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:textColor="#222" />
+
+                <TextView
+                    android:id="@+id/tvWelcomeUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome, User"
+                    android:textSize="16sp"
+                    android:textColor="#4A4A4A"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/btnProfile"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_profile"
+                android:background="@drawable/circle_bg"
+                android:padding="6dp"
+                android:contentDescription="Profile Icon" />
+        </LinearLayout>
+
+        <!-- Dashboard Grid -->
+        <GridLayout
+            android:id="@+id/dashboardGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:alignmentMode="alignMargins"
+            android:rowOrderPreserved="false"
+            android:useDefaultMargins="true"
+            android:layout_marginBottom="28dp">
+
+            <!-- Room Booking -->
+            <LinearLayout
+                android:id="@+id/cardRoomBooking"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="110dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/bg_dashboard_room_booking"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_room"
+                    android:contentDescription="Room Booking" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Room Booking"
+                    android:textStyle="bold"
+                    android:textColor="#222"
+                    android:textSize="16sp"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4 Rooms Available"
+                    android:textSize="14sp"
+                    android:textColor="#758294"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <!-- Resource Requests -->
+            <LinearLayout
+                android:id="@+id/cardResourceRequests"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="110dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_dashboard_resource"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_resource"
+                    android:contentDescription="Resource Requests" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Resource Requests"
+                    android:textStyle="bold"
+                    android:textColor="#222"
+                    android:textSize="16sp"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2 Pending"
+                    android:textSize="14sp"
+                    android:textColor="#758294"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <!-- Announcements -->
+            <LinearLayout
+                android:id="@+id/cardAnnouncements"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="110dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/bg_dashboard_announcement"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_announcement"
+                    android:contentDescription="Announcements" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Announcements"
+                    android:textStyle="bold"
+                    android:textColor="#222"
+                    android:textSize="16sp"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3 New"
+                    android:textSize="14sp"
+                    android:textColor="#758294"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <!-- My Schedule -->
+            <LinearLayout
+                android:id="@+id/cardMySchedule"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="110dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/bg_dashboard_schedule"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_schedule"
+                    android:contentDescription="My Schedule" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Schedule"
+                    android:textStyle="bold"
+                    android:textColor="#222"
+                    android:textSize="16sp"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2 Upcoming"
+                    android:textSize="14sp"
+                    android:textColor="#758294"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+        </GridLayout>
+
+        <!-- Recent Announcements Title -->
+        <TextView
+            android:id="@+id/tvAnnouncements"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recent Announcements"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:textColor="#222"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Announcements List -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/announcementsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:overScrollMode="never"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

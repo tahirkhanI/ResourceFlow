@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resource Request"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#222222"
+            android:gravity="center"
+            android:layout_marginBottom="28dp" />
+
+        <!-- Course Selection -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Course"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#111"
+            android:layout_marginTop="8dp" />
+
+        <Spinner
+            android:id="@+id/spinnerCourse"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Date & Time -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date &amp; Time"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#111"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/etDateTime"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="YYYY-MM-DD HH:MM"
+            android:background="@drawable/rounded_input_bg"
+            android:inputType="datetime"
+            android:focusable="false"
+            android:padding="12dp"
+            android:layout_marginBottom="14dp" />
+
+        <!-- Equipment Checklist -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Required Equipment"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#111"
+            android:layout_marginTop="8dp" />
+
+        <CheckBox
+            android:id="@+id/cbProjector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Projector"
+            android:minHeight="48dp" />
+
+        <CheckBox
+            android:id="@+id/cbComputer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Computer"
+            android:minHeight="48dp" />
+
+        <CheckBox
+            android:id="@+id/cbAudio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Audio System"
+            android:minHeight="48dp" />
+
+        <CheckBox
+            android:id="@+id/cbVC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Video Conference Equipment"
+            android:minHeight="48dp" />
+
+        <CheckBox
+            android:id="@+id/cbWhiteboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Whiteboard"
+            android:minHeight="48dp" />
+
+        <CheckBox
+            android:id="@+id/cbOther"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Other"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/etOtherEquipment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Specify other equipment"
+            android:visibility="gone"
+            android:layout_marginBottom="14dp" />
+
+        <!-- Room Availability -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Room"
+            android:textStyle="bold"
+            android:textColor="#111"
+            android:textSize="15sp"
+            android:layout_marginTop="8dp" />
+
+        <Spinner
+            android:id="@+id/spinnerRoom"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Notes -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Additional Notes"
+            android:textStyle="bold"
+            android:textColor="#111"
+            android:textSize="15sp"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/etNotes"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Add any special requirements or notes"
+            android:background="@drawable/rounded_input_bg"
+            android:inputType="textMultiLine"
+            android:padding="10dp"
+            android:layout_marginBottom="28dp" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Submit Request"
+            android:backgroundTint="#2763F7"
+            android:textColor="#FFF"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-medium"/>
+    </LinearLayout>
+</ScrollView>

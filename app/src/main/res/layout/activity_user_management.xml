@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#FFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Top App Bar with title and Add User button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="8dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="User Management"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#222"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/btnAddUser"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_input_add"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Add User"/>
+    </LinearLayout>
+
+    <!-- Search Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/editSearch"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:hint="Search user by name or email"
+            android:background="@android:drawable/edit_text"
+            android:padding="8dp"
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:inputType="text"/>
+
+        <!-- Optional: clear search button -->
+        <ImageButton
+            android:id="@+id/btnClearSearch"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:contentDescription="Clear Search"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <!-- Filter Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingBottom="4dp">
+
+        <Button
+            android:id="@+id/btnFilterAll"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="All"
+            android:layout_marginHorizontal="4dp"
+            android:backgroundTint="#2763F7"
+            android:textColor="#FFF"/>
+
+        <Button
+            android:id="@+id/btnFilterStudent"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="Student"
+            android:layout_marginHorizontal="4dp"
+            android:backgroundTint="#F5F5F7"
+            android:textColor="#222"/>
+
+        <Button
+            android:id="@+id/btnFilterFaculty"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="Faculty"
+            android:layout_marginHorizontal="4dp"
+            android:backgroundTint="#F5F5F7"
+            android:textColor="#222"/>
+
+        <Button
+            android:id="@+id/btnFilterAdmin"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="Admin"
+            android:layout_marginHorizontal="4dp"
+            android:backgroundTint="#F5F5F7"
+            android:textColor="#222"/>
+    </LinearLayout>
+
+    <!-- RecyclerView: Fill remaining space -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerUsers"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:clipToPadding="false"/>
+
+    <!-- Bottom bar: Delete button for selected users (show only when selection active) -->
+    <LinearLayout
+        android:id="@+id/deleteBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="end"
+        android:background="#FFEBEE"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btnDeleteUser"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Delete"
+            android:backgroundTint="#D32F2F"
+            android:textColor="#FFF"
+            android:drawableStart="@android:drawable/ic_menu_delete"/>
+    </LinearLayout>
+</LinearLayout>

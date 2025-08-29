@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme -->
+    <style name="Theme.ResourceFlow" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Point chipStyle to our custom Chip.Filter style -->
+        <item name="chipStyle">@style/Widget.ResourceFlow.Chip.Filter</item>
+    </style>
+
+    <!-- Custom Chip style supplying a valid textAppearance -->
+    <style name="Widget.ResourceFlow.Chip.Filter" parent="Widget.MaterialComponents.Chip.Filter">
+        <!-- Use the default Chip text appearance provided by MaterialComponents -->
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Chip</item>
+    </style>
+    <style name="Theme.ResourceFlow.Fullscreen" parent="Theme.ResourceFlow">
+        <!-- if you want no ActionBar overlay etc: -->
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <!-- or override your actionBarStyle -->
+    </style>
+
+
+</resources>

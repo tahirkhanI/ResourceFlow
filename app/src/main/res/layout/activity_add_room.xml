@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add New Room"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="18dp"
+            android:textColor="#222" />
+
+        <!-- Room Number -->
+        <EditText
+            android:id="@+id/editRoomNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:hint="@string/room_number"
+            android:inputType="text"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Room Type -->
+        <EditText
+            android:id="@+id/editRoomType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:hint="Room Type"
+            android:inputType="text"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Floor -->
+        <EditText
+            android:id="@+id/editFloor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:hint="Floor"
+            android:inputType="text"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Block Name -->
+        <EditText
+            android:id="@+id/editBlockName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:hint="Block Name"
+            android:inputType="text"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Submit button -->
+        <Button
+            android:id="@+id/btnAddRoom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Room"
+            android:textAllCaps="false"
+            android:textColor="#F0F0F0"
+            android:backgroundTint="#2763F7"
+            android:textSize="18sp"
+            android:minHeight="48dp" />
+    </LinearLayout>
+</ScrollView>
+

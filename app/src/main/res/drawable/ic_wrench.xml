@@ -1,0 +1,10 @@
+<!-- res/drawable/ic_wrench.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M22.7,19.3L14.9,11.5l1.8-1.8a6.958,6.958 0 0,0 -3,-4.28l-3.46,3.46-5.08-5.08L9.2,4.5a6.947,6.947 0 0,0 4.3,3l-1.8,1.8L19.3,22.7a1,1 0 0,0 1.42-1.42zM5.8,3.4a5.646,5.646 0 0,1 7.97,0l-1.06,1.06a4.646,4.646 0 0,0 -5.85,5.85L5.8,11a5.643,5.643 0 0,1 0-7.6z"/>
+</vector>

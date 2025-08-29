@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">ResourceFlow</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">Welcome !</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">Login failed</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="title_activity_signup" />
+    <string name="room_count_format">%1$d/%2$d</string>
+    <string name="room_number">Room Number</string>
+    <string name="notifications">Notifications</string>
+    <string name="profile">Profile</string>
+    <string name="manage_classroom_resources">Manage Classroom Resources</string>
+
+    <string name="select_existing_room">Select Existing Room</string>
+    <string name="search_room_number">Search room number...</string>
+    <string name="room_301">Room 301</string>
+    <string name="lecture_hall">Lecture Hall</string>
+    <string name="third_block_a">3rd - Block A</string>
+    <string name="or">or</string>
+    <string name="create_new_room">Create New Room</string>
+    <string name="enter_room_number">Enter room number</string>
+    <string name="select_room_type">Select room type</string>
+    <string name="select_floor">Select floor</string>
+    <string name="enter_block_name">Enter block name</string>
+    <string name="room_resources">Room Resources</string>
+    <string name="projector">Projector</string>
+    <string name="computer">Computer</string>
+    <string name="whiteboard">Whiteboard</string>
+    <string name="ac">AC</string>
+    <string name="speakers">Speakers</string>
+    <string name="smart_board">Smart Board</string>
+    <string name="save_room_and_resources">Save Room &amp; Resources</string>
+    <string name="manage_classroom">Manage Classroom</string>
+    <string name="search_hint">Search room number...</string>
+    <string name="room_205">Room 205\nLab\n2nd • Block B</string>
+    <string name="room_402">Room 402\nSeminar\n4th • Block C</string>
+    <string name="err_load_classrooms">Failed to load classrooms</string>
+    <string name="err_generic">Error: %1$s</string>
+
+    <string name="save_room">Save Room</string>
+    <string name="back_button">\n</string>
+</resources>
+
