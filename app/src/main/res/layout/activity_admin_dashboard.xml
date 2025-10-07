@@ -19,12 +19,15 @@
 
 
 
-            <ImageView
+            <Button
                 android:id="@+id/profileIcon"
-                android:layout_width="34dp"
-                android:layout_height="34dp"
-                android:src="@drawable/ic_profile"
-                android:background="@drawable/circle_bg" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+
+                android:drawableStart="@drawable/ic_logout"
+                android:padding="8dp"/>
+
         </LinearLayout>
 
         <TextView

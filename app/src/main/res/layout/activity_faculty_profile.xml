@@ -65,7 +65,7 @@
             android:id="@+id/tvName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Dr. Sarah Mitchell"
+            android:text="faculty"
             android:textStyle="bold"
             android:textColor="#1A2232"
             android:textSize="24sp"
@@ -115,7 +115,7 @@
                     android:id="@+id/tvEmail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="s.mitchell@university.edu"
+                    android:text="fac@test.com"
                     android:textSize="15sp"
                     android:textColor="#20294A"
                     android:layout_marginStart="10dp"/>
@@ -138,7 +138,7 @@
                     android:id="@+id/tvOffice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Room 405, Engineering Building"
+                    android:text="Room 102, SCAD"
                     android:textSize="15sp"
                     android:textColor="#20294A"
                     android:layout_marginStart="10dp"/>
@@ -161,34 +161,13 @@
                     android:id="@+id/tvPhone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="(555) 123-4567"
+                    android:text="793617528"
                     android:textSize="15sp"
                     android:textColor="#20294A"
                     android:layout_marginStart="10dp"/>
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="12dp"
-                android:gravity="center_vertical">
 
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/ic_clock"
-                    app:tint="#30678A"
-                    android:contentDescription="Office Hours"/>
-                <TextView
-                    android:id="@+id/tvOfficeHours"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Office Hours: Mon/Wed 2-4 PM"
-                    android:textSize="15sp"
-                    android:textColor="#20294A"
-                    android:layout_marginStart="10dp"/>
-            </LinearLayout>
 
         </LinearLayout>
     </LinearLayout>

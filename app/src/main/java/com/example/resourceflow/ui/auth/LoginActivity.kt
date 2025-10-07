@@ -20,6 +20,7 @@ import retrofit2.Response
 class LoginActivity : AppCompatActivity() {
 
     private var passwordVisible = false
+    private val PREFS_NAME = "app_prefs"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +36,6 @@ class LoginActivity : AppCompatActivity() {
 
         // Forget Password click
         tvForgetPassword.setOnClickListener {
-            // Navigate to ForgetPasswordActivity
             startActivity(Intent(this, ForgetPasswordActivity::class.java))
         }
 
@@ -75,6 +75,16 @@ class LoginActivity : AppCompatActivity() {
                         Toast.makeText(this@LoginActivity, "Login successful!", Toast.LENGTH_SHORT).show()
                         val user = resp.user
 
+                        // Save to SharedPreferences so other screens can read USER_ID later
+                        user?.let {
+                            val prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
+                            prefs.edit()
+                                .putInt("USER_ID", it.id)
+                                .putString("USER_NAME", it.name)
+                                .putString("USER_EMAIL", it.email)
+                                .apply()
+                        }
+
                         val intent = when (resp.role.lowercase()) {
                             "faculty" -> Intent(this@LoginActivity, FacultyDashboardActivity::class.java)
                             "student" -> Intent(this@LoginActivity, StudentDashboardActivity::class.java)
@@ -85,7 +95,7 @@ class LoginActivity : AppCompatActivity() {
                             }
                         }
 
-                        // Pass user data to dashboard
+                        // Pass user data to dashboard (still pass Intent extras)
                         user?.let {
                             intent.putExtra("USER_ID", it.id)
                             intent.putExtra("USER_NAME", it.name)

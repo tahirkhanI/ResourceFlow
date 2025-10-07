@@ -25,17 +25,17 @@ class FacultyProfileActivity : AppCompatActivity() {
         val tvEmail = findViewById<TextView>(R.id.tvEmail)
         val tvOffice = findViewById<TextView>(R.id.tvOffice)
         val tvPhone = findViewById<TextView>(R.id.tvPhone)
-        val tvOfficeHours = findViewById<TextView>(R.id.tvOfficeHours)
+
         val imageProfile = findViewById<ImageView>(R.id.imageProfile)
 
         // Placeholder: Fetch and set faculty data here (replace with backend CALL)
-        tvName.text = "Dr. Sarah Mitchell"
+        tvName.text = "Suresh"
         tvTitle.text = "Professor of Computer Science"
         tvSchool.text = "School of Engineering"
-        tvEmail.text = "s.mitchell@university.edu"
-        tvOffice.text = "Room 405, Engineering Building"
-        tvPhone.text = "(555) 123-4567"
-        tvOfficeHours.text = "Office Hours: Mon/Wed 2-4 PM"
+        tvEmail.text = "fac@test.com"
+        tvOffice.text = "Room 202, SCAD"
+        tvPhone.text = "793617528"
+
         // For imageProfile: Use Glide/Picasso for backend images
 
         btnBack.setOnClickListener { finish() }

@@ -6,7 +6,7 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.example.resourceflow.R
 import com.example.resourceflow.network.ApiClient
-import com.example.resourceflow.ui.admin.BasicResponse
+import com.example.resourceflow.network.BasicResponse
 import com.example.resourceflow.network.ResetWithOtpRequest
 import retrofit2.Call
 import retrofit2.Callback

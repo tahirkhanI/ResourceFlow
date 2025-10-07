@@ -9,11 +9,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.resourceflow.R
-import com.example.resourceflow.ui.resource.ResourceRequestActivity
-import com.example.resourceflow.ui.classroom.ClassroomBookingActivity
 import com.example.resourceflow.ui.faculty.FacultyProfileActivity
 import com.example.resourceflow.ui.faculty.PostAnnouncementActivity
-
+import com.example.resourceflow.ui.faculty.booking.ClassroomBookingListActivity
+import com.example.resourceflow.ui.faculty.booking.UserBookingsActivity
+import com.example.resourceflow.ui.faculty.report.ResourceRequestActivity
 
 class FacultyDashboardActivity : AppCompatActivity() {
 
@@ -42,7 +42,7 @@ class FacultyDashboardActivity : AppCompatActivity() {
         val btnProfile = findViewById<ImageView>(R.id.btnProfile)
 
         cardRoomBooking.setOnClickListener {
-            startActivity(Intent(this, ClassroomBookingActivity::class.java))
+            startActivity(Intent(this, ClassroomBookingListActivity::class.java))
         }
 
         cardResourceRequests.setOnClickListener {
@@ -54,6 +54,7 @@ class FacultyDashboardActivity : AppCompatActivity() {
         }
 
         cardMySchedule.setOnClickListener {
+            startActivity(Intent(this, UserBookingsActivity::class.java))
             // Can use userId here to fetch schedule
         }
 

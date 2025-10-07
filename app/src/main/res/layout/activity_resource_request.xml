@@ -20,43 +20,6 @@
             android:gravity="center"
             android:layout_marginBottom="28dp" />
 
-        <!-- Course Selection -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Course"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:textColor="#111"
-            android:layout_marginTop="8dp" />
-
-        <Spinner
-            android:id="@+id/spinnerCourse"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginBottom="12dp" />
-
-        <!-- Date & Time -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Date &amp; Time"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:textColor="#111"
-            android:layout_marginTop="8dp" />
-
-        <EditText
-            android:id="@+id/etDateTime"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:hint="YYYY-MM-DD HH:MM"
-            android:background="@drawable/rounded_input_bg"
-            android:inputType="datetime"
-            android:focusable="false"
-            android:padding="12dp"
-            android:layout_marginBottom="14dp" />
-
         <!-- Equipment Checklist -->
         <TextView
             android:layout_width="match_parent"
@@ -117,7 +80,7 @@
             android:visibility="gone"
             android:layout_marginBottom="14dp" />
 
-        <!-- Room Availability -->
+        <!-- Room Input -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -127,10 +90,14 @@
             android:textSize="15sp"
             android:layout_marginTop="8dp" />
 
-        <Spinner
-            android:id="@+id/spinnerRoom"
+        <EditText
+            android:id="@+id/etRoomNumber"
             android:layout_width="match_parent"
             android:layout_height="48dp"
+            android:hint="Enter room number"
+            android:inputType="text"
+            android:background="@drawable/rounded_input_bg"
+            android:padding="10dp"
             android:layout_marginBottom="12dp" />
 
         <!-- Notes -->

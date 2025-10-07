@@ -1,170 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="8dp"
-    android:layout_marginTop="0dp"
-    android:layout_marginBottom="16dp"
-    android:backgroundTint="@android:color/white"
-    android:elevation="4dp">
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@android:color/white"
+    android:layout_margin="8dp">
 
+    <!-- Classroom Name and Availability -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/textClassroomName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Room 101"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textAvailability"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Available Now"
+            android:textSize="14sp"
+            android:textColor="@android:color/holo_green_dark"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Book Now Button -->
+    <Button
+        android:id="@+id/btnBookNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Book Now"
+        android:textSize="14sp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor="@android:color/white"
+        android:layout_gravity="end"
+        android:layout_marginTop="-24dp" />
+
+    <!-- Capacity and Resources -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="12dp">
+        android:layout_marginTop="8dp">
 
-        <!-- Top row -->
-        <LinearLayout
-            android:layout_width="match_parent"
+        <!-- Capacity -->
+        <TextView
+            android:id="@+id/textCapacity"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:paddingTop="8dp"
-            android:paddingBottom="4dp"
-            android:weightSum="2">
+            android:text="Capacity: 40 students"
+            android:textSize="14sp" />
 
-            <TextView
-                android:id="@+id/tvRoomName"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.2"
-                android:maxLines="1"
-                android:text="@string/room_name"
-                android:textColor="#212121"
-                android:textSize="18sp"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:id="@+id/tvAvailable"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp"
-                android:text="@string/available_now"
-                android:textColor="#178A4F"
-                android:textSize="14sp"
-                android:textStyle="bold"/>
-
-            <Button
-                android:id="@+id/btnBook"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:minHeight="48dp"
-                android:minWidth="64dp"
-                android:paddingStart="20dp"
-                android:paddingEnd="20dp"
-                android:layout_marginStart="12dp"
-                android:text="@string/book_now"
-                android:textColor="#FFF"
-                android:textSize="14sp"
-                android:backgroundTint="#1A237E"/>
-        </LinearLayout>
-
-        <!-- Capacity/Power -->
-        <LinearLayout
-            android:layout_width="match_parent"
+        <!-- Power Outlets -->
+        <TextView
+            android:id="@+id/textPowerOutlets"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="start"
-            android:layout_marginTop="4dp">
+            android:text="20 power outlets"
+            android:textSize="14sp" />
 
-            <TextView
-                android:id="@+id/tvCapacity"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:drawableStartCompat="@drawable/ic_profile"
-                android:drawablePadding="6dp"
-                android:paddingStart="0dp"
-                android:paddingEnd="16dp"
-                android:text="@string/capacity_format"
-                android:textColor="#333"
-                android:textSize="14sp"/>
-
-            <TextView
-                android:id="@+id/tvPower"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:drawableStartCompat="@drawable/ic_power"
-                android:drawablePadding="2dp"
-                android:paddingStart="0dp"
-                android:paddingEnd="2dp"
-                android:text="@string/power_outlets_format"
-                android:textColor="#333"
-                android:textSize="14sp"/>
-        </LinearLayout>
-
-        <!-- Tables/Chairs -->
-        <LinearLayout
-            android:layout_width="match_parent"
+        <!-- Tables -->
+        <TextView
+            android:id="@+id/textTables"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="start">
+            android:text="8 tables"
+            android:textSize="14sp" />
 
-            <TextView
-                android:id="@+id/tvTables"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:drawableStartCompat="@drawable/ic_table"
-                android:drawablePadding="6dp"
-                android:paddingStart="0dp"
-                android:paddingEnd="16dp"
-                android:text="@string/tables_format"
-                android:textColor="#333"
-                android:textSize="14sp"/>
-
-            <TextView
-                android:id="@+id/tvChairs"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:drawableStartCompat="@drawable/ic_chair"
-                android:drawablePadding="6dp"
-                android:paddingStart="0dp"
-                android:paddingEnd="16dp"
-                android:text="@string/chairs_format"
-                android:textColor="#333"
-                android:textSize="14sp"/>
-        </LinearLayout>
-
-        <!-- Resource icons -->
-        <LinearLayout
-            android:layout_width="match_parent"
+        <!-- Chairs -->
+        <TextView
+            android:id="@+id/textChairs"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="6dp">
-
-            <ImageView
-                android:id="@+id/icProjector"
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:layout_marginEnd="6dp"
-                android:contentDescription="@string/projector_desc"
-                android:src="@drawable/ic_projector"/>
-
-            <ImageView
-                android:id="@+id/icAC"
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:layout_marginEnd="6dp"
-                android:contentDescription="@string/ac_desc"
-                android:src="@drawable/ic_ac"/>
-
-            <ImageView
-                android:id="@+id/icFan"
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:layout_marginEnd="6dp"
-                android:contentDescription="@string/fan_desc"
-                android:src="@drawable/ic_fan"/>
-
-            <ImageView
-                android:id="@+id/icWifi"
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:contentDescription="@string/wifi_desc"
-                android:src="@drawable/ic_wifi"/>
-        </LinearLayout>
+            android:text="32 chairs"
+            android:textSize="14sp" />
     </LinearLayout>
-</com.google.android.material.card.MaterialCardView>
+
+    <!-- Resources (Icons) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/textProjector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\uD83D\uDCF7 Projector"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textAC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\uD83C\uDF2C AC"
+            android:textSize="14sp"
+            android:layout_marginStart="8dp" />
+
+        <TextView
+            android:id="@+id/textFan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\uD83D\uDCA8 Fan"
+            android:textSize="14sp"
+            android:layout_marginStart="8dp" />
+
+        <TextView
+            android:id="@+id/textWiFi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\uD83D\uDCF6 Wi-Fi"
+            android:textSize="14sp"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Existing Resources TextView (hidden) -->
+    <TextView
+        android:id="@+id/textRoomResources"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resources"
+        android:textSize="14sp"
+        android:visibility="gone" />
+</LinearLayout>

@@ -47,5 +47,8 @@
 
     <string name="save_room">Save Room</string>
     <string name="back_button">\n</string>
+
+
+    <string name="invalid_quantity">Please enter a valid quantity</string>
 </resources>
 

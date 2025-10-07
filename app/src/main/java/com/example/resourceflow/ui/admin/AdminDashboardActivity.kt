@@ -6,6 +6,8 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.example.resourceflow.R
 import com.example.resourceflow.network.AppConfig
+import com.example.resourceflow.ui.admin.resourcemanage.ClassroomListActivity
+import com.example.resourceflow.ui.auth.LoginActivity
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.*
@@ -73,7 +75,7 @@ class AdminDashboardActivity : AppCompatActivity() {
             startActivity(Intent(this, UserManagementActivity::class.java))
         }
         findViewById<LinearLayout>(R.id.btnResourceManagement).setOnClickListener {
-            startActivity(Intent(this, AddResourceActivity::class.java))
+            startActivity(Intent(this, ClassroomListActivity::class.java))
         }
         findViewById<LinearLayout>(R.id.btnReports).setOnClickListener {
             startActivity(Intent(this, ReportsActivity::class.java))
@@ -84,6 +86,9 @@ class AdminDashboardActivity : AppCompatActivity() {
         }
         findViewById<Button>(R.id.btnAddResource).setOnClickListener {
             startActivity(Intent(this, AddRoomActivity::class.java))
+        }
+        findViewById<Button>(R.id.profileIcon).setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
         }
     }
 

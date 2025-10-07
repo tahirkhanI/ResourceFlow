@@ -28,5 +28,8 @@
         <item name="tvSelectedRoom" type="id" />
         <item name="tvSelectDateLabel" type="id" />
         <item name="tvSelectTimeLabel" type="id" />
-    </resources>
+    <item name="chipGroupCategories" type="id" />
+    <item name="rvClassrooms" type="id" />
+    <item name="tvClassroomName" type="id" />
+</resources>
 

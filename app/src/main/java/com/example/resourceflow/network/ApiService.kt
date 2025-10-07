@@ -1,12 +1,19 @@
 package com.example.resourceflow.network
 
-import com.example.resourceflow.ui.admin.BasicResponse
+import com.example.resourceflow.network.BasicResponse
 import com.example.resourceflow.ui.admin.ReportsResponse
 import com.example.resourceflow.network.ClassroomResponseDto
-
+import com.example.resourceflow.network.LoginRequest
+import com.example.resourceflow.network.LoginResponse
+import com.example.resourceflow.network.SignUpRequest
+import com.example.resourceflow.network.SignUpResponse
+import com.example.resourceflow.ui.faculty.report.ReportRequest
+import com.example.resourceflow.ui.faculty.report.ReportResponse
 import retrofit2.Call
-import retrofit2.Response
 import retrofit2.http.*
+import retrofit2.http.Field
+import retrofit2.http.FormUrlEncoded
+import retrofit2.http.POST
 
 interface ApiService {
 
@@ -28,10 +35,6 @@ interface ApiService {
 
     @GET("reports_admin.php")
     fun getReports(): Call<ReportsResponse>
-    @GET("classrooms")
-    suspend fun getClassrooms(): Response<ClassroomResponseDto>
-
-
 
     @FormUrlEncoded
     @POST("reports_admin.php")
@@ -39,4 +42,24 @@ interface ApiService {
         @Field("report_id") reportId: Int,
         @Field("status") status: String
     ): Call<BasicResponse>
+
+
+
+    @GET("get_Classrooms.php")
+    fun getClassrooms(): Call<ClassroomsResponse>
+
+
+    @Headers("Content-Type: application/json")
+    @POST("bookclassroom.php")   // adjust path if your PHP is in a subfolder
+    fun bookClassroom(
+        @Body bookingRequest: BookingRequest
+    ): Call<BasicResponse>
+
+
+
+    interface ReportApi {
+        @POST("report_fac.php")
+        fun submitReport(@Body report: ReportRequest): Call<ReportResponse>
+    }
+
 }
